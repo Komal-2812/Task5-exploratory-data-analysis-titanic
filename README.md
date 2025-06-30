@@ -15,7 +15,28 @@ The goal is to uncover insights about passenger demographics and how different f
 - Matplotlib
 - Seaborn
 
-📊 Key Analyses Performed
+🧾 Step-by-Step Process
+
+✅ 1. Basic Understanding of the Dataset
+Performed basic inspection using:
+- `df.head()` – View top 5 rows
+- `df.info()` – Data types and null values
+- `df.describe()` – Summary statistics
+- `df.isnull().sum()` – Count of missing values
+- `df['Sex'].value_counts()` – Frequency count of categorical features
+
+✅ 2. Data Cleaning
+Cleaned and prepared the data by:
+- **Handling Missing Values:**
+  - Filled missing `Age` values using median.
+  - Filled missing `Embarked` values using mode.
+  - Dropped `Cabin` due to excessive missing data.
+- **Data Type Conversion:**
+  - Converted `Survived` and `Pclass` to categorical for appropriate analysis.
+- **Renamed Columns:**
+  - `Pclass` was renamed to `PassengerClass` for clarity.
+  - 
+📊 3. Key Analyses Performed
 - **Univariate Analysis**:
   - Age, Fare, Sex, Pclass distributions using histograms, boxplots, and countplots.
 - **Bivariate Analysis**:
@@ -28,7 +49,7 @@ The goal is to uncover insights about passenger demographics and how different f
 - **Handling Skewed Data**:
   - Log transformation applied to skewed Fare column
 
-📌 Summary of Findings
+📌 4. Summary of Findings
 - 👩‍🦱 Most survivors were female.
 - 🛳 1st class passengers had the highest survival rate.
 - 💰 Higher Fare correlated with higher survival chances.
